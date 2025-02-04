@@ -1,1 +1,1 @@
-ls -w
+ls -p | grep -v '^\.' | paste -sd ","
