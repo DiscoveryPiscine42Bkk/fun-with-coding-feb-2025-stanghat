@@ -1,176 +1,231 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tanawat</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Boxicons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #4f92cc, #6363f1);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 50px;
+        }
+
+        header {
+            background: white;
+            color: #1f6cf0;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #269ded;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .navigation h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .navigation a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        .navigation a:hover {
+            font-size: 22px;
+        }
+
+        .section {
+            padding: 80px 20px;
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.5s ease-in-out;
+        }
+
+        #home { background: #f5e252; text-align: center; }
+        #about { background: #febd3c; text-align: center; }
+        #vlog { background: #3bf1b4; text-align: center; }
+        #contact { background: #ab84ff; text-align: center; }
+
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .home-img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-img {
+            width: 250px;
+            margin-right: 20px;
+            border: 5px solid #00eaff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .VLOG-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .VLOG-images img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            font-size: 50px;
+            color: black;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contact-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            line-height: 2;
+            margin-bottom: 20px; /* เพิ่มระยะห่างจากเนื้อหาด้านล่าง */
+         }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: #080808;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#home">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
+    <div class="navigation">
+        <h1>My Portfolio</h1>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#vlog">Vlog</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
         <!-- Home Section -->
-    <header id="home" class="home-section d-flex align-items-center text-center bg-primary text-white">
-        <div class="container">
-            <div class="row">
-                <!-- Left Card (Profile Image) -->
-                <div class="col-md-6 text-center">
-                    <div class="card border-light bg-transparent">
-                        <img src="../assets/images/tsoontho/tsoontho_main.jpg" class="card-img-top rounded-circle shadow-lg" alt="Your Profile Picture" style="width: 250px; height: 250px; object-fit: cover;">
-                    </div>
-                </div>
-
-                <!-- Right Card (Short Description) -->
-                <div class="col-md-6">
-                    <div class="card border-light bg-transparent">
-                        <div class="card-body">
-                            <h1 class="display-4">Hello, I'm <span class="text-light">Tanawat</span></h1>
-                            <p class="lead">A Passionate Developer & Data Enthusiast</p>
-                            <p class="text-light">I'm a Developer & Data Engineer specializing in Python, ETL, and Web Development. I transform data into insights and build automation solutions to streamline workflows.</p>
-                            <a href="#portfolio" class="btn btn-light btn-lg">View My Work</a>
-                        </div>
-                    </div>
-                </div>
+        <section id="home" class="section">
+            <h2>HOME</h2>
+            <div class="home-content">
+                <img class="home-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475424211_617573337641047_8985432221620845809_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=p6i4iBEPoh8Q7kNvgFRydWX&_nc_oc=AdjGBZtq8FByQX5_6w-aFO0vTVYzRLUlaXhlMFycDaRwbJ0ZU385ihT1GcQcoZ3nHwxGPG0MKG9P-2-ow5mTPTwt&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGCt1pkvpfgDfaA8hRpC2XJBhtOnz6TNFaybnprN5QWRQ&oe=67CC8226" alt="Picture">
+                <p>สวัสดีคับ ยินดีต้อนรับเข้าสู่หน้าเว็บ portfolio ของผม</p>
             </div>
-        </div>
-    </header>
+        </section>
 
-
-    <!-- About Me Section -->
-    <section id="about" class="about-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4 text-primary">About Me</h2>
-            <div class="row align-items-center">
-                <!-- Profile Image -->
-                <div class="col-lg-4 text-center">
-                    <img src="../assets/images/tsoontho/tsoontho_prf3.jpg" class="img-fluid rounded-circle shadow-lg" alt="Your Profile Picture">
-                </div>
-                <!-- About Me Content -->
-                <div class="col-lg-8">
-                    <h3 class="mb-3 text-dark">Hi, I'm <span class="text-primary">Tanawat</span> 👋</h3>
-                    <p class="lead">I'm a passionate <strong class="text-primary">Developer & Data Engineer</strong> with expertise in <strong>Python, ETL, Web Development, and Automation</strong>. I specialize in transforming raw data into valuable insights and building efficient systems.</p>
-                    <p>With hands-on experience in **Microsoft Access, Pandas, and Webflow**, I create seamless automation solutions. I love problem-solving, optimizing workflows, and crafting beautiful user experiences.</p>
-
-                    <!-- Skill Bars -->
-                    <div class="mt-4">
-                        <h5 class="text-primary">Technical Skills</h5>
-                        <div class="mb-2">
-                            <span class="text-dark">Python & Data Processing</span>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" style="width: 40%;">40%</div>
-                            </div>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-dark">Web Development (HTML, CSS, JS)</span>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" style="width: 35%;">35%</div>
-                            </div>
-                        </div>
-                        <div class="mb-2">
-                            <span class="text-dark">Database & Automation</span>
-                            <div class="progress">
-                                <div class="progress-bar bg-info" style="width: 56%;">56%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Download Resume & Contact -->
-                    <div class="mt-4">
-                        <a href="resume.pdf" class="btn btn-primary btn-lg me-2">Download Resume</a>
-                        <a href="#contact" class="btn btn-outline-dark btn-lg">Contact Me</a>
-                    </div>
-                </div>
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2>ABOUT ME</h2>
+            <div class="about-content">
+                <img class="about-img" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/476307362_987345076642262_5991867820276638279_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=lcSKBlLPIfcQ7kNvgEcyVx3&_nc_oc=AdifsR2wHLpJnTgbsj80nPHnwEx4cYLMJ3UPJNZu16ZLyI09IUH-FYz-78Lu6t6SnEOQn1FjtV6QqZ76KJbzc_bG&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gG13EuwDl0WCm7NHzaxiJsU2wfT57Ec6BJGspkMyhx_Zg&oe=67CC49D3" alt="Profile Picture">
+                <p>ชื่อ-นามสกุล : นายศุภกิจ ตั้งหทัยทิพย์</p>
+                <p>ชื่อเล่น : โฟล์ค</p>
+                <p>สถานศึกษา : สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                <p>คณะ : วิทยาศาสตร์</p>
+                <p>สาขา : สถิติประยุกต์และการวิเคราะห์ข้อมูล</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Section with Grid -->
-    <div id="portfolio" class="section py-5 bg-secondary">
-        <h2 class="text-center text-light">My Work</h2>
-        <div class="container">
-            <div class="row g-3"> <!-- Added gap between cards -->
-                <!-- Card 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card border-primary">
-                        <img src="../assets/images/tsoontho/tsoontho_prj1.jpg" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Database System Improvement Using Automated Database Management</h5>
-                            <p class="card-text text-dark">
-                                work with Excel data related to terminal marshaling, cabinet positions, and other similar data, 
-                                automating the process with Python. This allows for easier data retrieval, 
-                                visualization, and more efficient management.
-                            </p>
-                            <button class="btn btn-primary view-more" data-project="Project 1 details: This project is about...">View More</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card border-success">
-                        <img src="../assets/images/tsoontho/tsoontho_prj2.jpg" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title text-success">Cobot Contest Thailand 2024</h5>
-                            <p class="card-text text-dark">
-                                Participate in coding the robot arm to successfully complete the mission with safety and reduced movement.
-                            </p>
-                            <button class="btn btn-success view-more" data-project="Project 2 details: This project focuses on...">View More</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card border-warning">
-                        <img src="https://cdn.dribbble.com/userupload/16559473/file/original-93b1b5449e8855aaa07bc5ed0ae36ef0.png?resize=1504x1128&vertical=center" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title text-warning">Hybrid AQI Forecasting: ARIMA & LSTM (In Process..)</h5>
-                            <p class="card-text text-dark">
-                                involves forecasting AQI using a hybrid ARIMA-LSTM model. ARIMA handles time-series trends, 
-                                while LSTM captures complex patterns in the data. 
-                                This combination aims to improve the accuracy and reliability of air quality predictions.
-                            </p>
-                            <button class="btn btn-warning view-more" data-project="Project 3 details: This project is all about...">View More</button>
-                        </div>
-                    </div>
-                </div>
+        <!-- Vlog Section -->
+        <section id="vlog" class="section">
+            <h2>VLOG</h2>
+            <div class="VLOG-images">
+                <figure>
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/476587439_1185376213021514_2551774702514733325_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jCE1PEmAqyAQ7kNvgFpzoS9&_nc_oc=AdgqyRDVfkYapT1yLzgYMjOMMS3BjDU-mkeCuwQyfhXjvk7LcxdhT5syYXwtDd50SOWBwb3Xr0S6hj1x7OE9oy49&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gEonduIixtYzaWlRnto6jgvp4QupABirsgxcoKlbMyfag&oe=67CC7EAD" alt="vlog1">
+                    <figcaption>VLOG ep1</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475233929_644405964751627_3452791976125261630_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=-UrOEXKZWaUQ7kNvgFywM4z&_nc_oc=Adj3WEH50SP9BcEAcQAykAfyxIiuYBHEh_YPmrOWI2rV2RLHevRI4GPhnlamSBITQlUbZ1-uLj1hlrH3N-soMiqM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gGS7iHHy4MU0E5R5h13-Uq4p-rmjavt9fDkBpmknWiXjA&oe=67CC9210" alt="vlog2">
+                    <figcaption>VLOG ep2</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/475325205_1847202006024423_6612037539282746140_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=hNX4hfvrdYIQ7kNvgGL1R-7&_nc_oc=Adi1MzkDTtjkukVNDbIRbpOMJPjbquR0s6VLqytB0M4Ln7j4HykgteYR7Rl8l8OZRRBm749__YuGa-Nsz9Rjl-ki&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gFmbz7SatYTqNPIztR-y1FODSlYNk4umgGToKLZ8ZLVQA&oe=67CC9417" alt="vlog3">
+                    <figcaption>VLOG ep3</figcaption>
+                </figure>
             </div>
-        </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/exoser.chanel" target="_blank"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/napfxlk_05/?hl=en" target="_blank"><i class="bx bxl-instagram"></i></a>
+                <a href="https://twitter.com/profile" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="https://github.com/stanghat" target="_blank"><i class="bx bxl-github"></i></a>
+            </div>
+        </section>
     </div>
 
-    <!-- Contact Section -->
-    <div id="contact" class="section bg-dark text-white py-5">
-        <h2 class="text-center">Contact Me</h2>
-        <p class="text-center">Let's get in touch!</p>
-        <div class="social-links text-center">
-            <a href="https://facebook.com/yourprofile" target="_blank"><i class="bx bxl-facebook fs-4 text-white me-3"></i></a>
-            <a href="https://instagram.com/yourprofile" target="_blank"><i class="bx bxl-instagram fs-4 text-white me-3"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank"><i class="bx bxl-twitter fs-4 text-white me-3"></i></a>
-            <a href="https://github.com/yourprofile" target="_blank"><i class="bx bxl-github fs-4 text-white me-3"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="bx bxl-linkedin fs-4 text-white me-3"></i></a>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navigation a').on('click', function (event) {
+                event.preventDefault();
+                let target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top - 50
+                }, 800);
+            });
+        });
+    </script>
 </body>
 </html>
