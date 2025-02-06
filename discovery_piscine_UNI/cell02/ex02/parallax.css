@@ -36,7 +36,6 @@ body {
 #img1 {
     background-image: url("https://er-static.s3.amazonaws.com/uploads/hosts/3be453edde07f8cd9f3884ccd2910c404fad5670.jpg");
     min-height: 100vh;
-    color: white;
 }
 
 #img2 {
