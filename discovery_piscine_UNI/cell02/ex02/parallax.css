@@ -24,7 +24,7 @@ body {
 .black-block {
     background-color: black;
     padding: 64px;
-    height: 300px;
+    height: 200px;
     color: white;
     display: flex;
     text-align: center;
