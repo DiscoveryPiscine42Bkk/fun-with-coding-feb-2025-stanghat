@@ -127,9 +127,11 @@ h2 {
  }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #080808;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* ใช้ฟอนต์ที่ดูโมเดิร์นขึ้น */
+    font-size: 20px; /* ขยายขนาดฟอนต์ */
+    font-weight: 500; /* ทำให้ตัวอักษรดูชัดขึ้น */
+    color: #222; /* ใช้สีที่ดูเป็นธรรมชาติ */
+    line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัดให้อ่านง่ายขึ้น */
+    letter-spacing: 0.5px; /* เพิ่มระยะห่างระหว่างตัวอักษรเล็กน้อย */
+    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่าง */
 }
