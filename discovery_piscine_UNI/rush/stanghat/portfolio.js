@@ -1,5 +1,4 @@
-    <script>
-        $(document).ready(function () {
+     $(document).ready(function () {
             $('.navigation a').on('click', function (event) {
                 event.preventDefault();
                 let target = $(this).attr('href');
@@ -8,4 +7,3 @@
                 }, 800);
             });
         });
-    </script>
