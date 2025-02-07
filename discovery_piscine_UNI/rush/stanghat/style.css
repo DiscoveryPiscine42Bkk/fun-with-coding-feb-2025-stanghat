@@ -65,18 +65,25 @@ header {
 #contact { background: #ab84ff; text-align: center; }
 
 .home-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
 .home-img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-contact {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
 .about-img {
@@ -101,6 +108,18 @@ header {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.VLOG-images figure:hover img {
+    transform: scale(1.1);
+}
+
+figcaption {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px; /* เพิ่มระยะห่างจากรูปภาพ */
+    padding-top: 5px; /* ปรับระยะให้สมดุล */
 }
 
 .contact-icons {
