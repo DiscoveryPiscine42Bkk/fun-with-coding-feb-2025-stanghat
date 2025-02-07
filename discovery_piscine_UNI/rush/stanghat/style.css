@@ -187,11 +187,6 @@ p {
         width: 80%;
         height: auto;
     }
-
-    .navigation {
-        flex-direction: column; /* Align menu items vertically */
-        padding: 10px;
-    }
 }
 
 @media screen and (max-width: 480px) {
