@@ -169,35 +169,3 @@ p {
     letter-spacing: 0.5px;
     margin-bottom: 15px;
 }
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .VLOG-images {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .VLOG-images img {
-        width: 90%;
-        height: auto;
-    }
-
-    .home-img, .about-img {
-        width: 80%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .VLOG-images img {
-        width: 100%;
-    }
-
-    .home-img, .about-img {
-        width: 100%;
-    }
-
-    .contact-icons a {
-        font-size: 40px;
-    }
-}
