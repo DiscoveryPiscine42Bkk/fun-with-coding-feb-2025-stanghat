@@ -6,11 +6,10 @@ body {
     background: linear-gradient(45deg, #4f92cc, #6363f1);
 }
 
-/* Layout */
 .container {
     width: 80%;
     margin: auto;
-    padding: 50px;
+    padding: 50
 }
 
 /* Header */
